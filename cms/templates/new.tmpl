@@ -1,0 +1,52 @@
+{{ define "new" }}
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>{{ .Title }}</title>
+    
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/skeleton.css">
+    
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="/images/favicon.png">
+  </head>
+  <body>
+      <div class="row">
+        <h1>New Post</h1>
+      </div>
+    <form action="new" method="post">
+      <div class="row">
+        <label for="title">Title</label>
+        <input class="u-full-width" type="text" id="title" placeholder="Title">
+      </div>
+      <div class="row">
+        <label for="content">Content</label>
+        <textarea class="u-full-width" type="text" id="content"></textarea>
+      </div>
+      <div class="row">
+        <div class="six columns">
+          <input type="radio" name="content-type" value="page" checked>Page
+        </div>
+        <div class="six columns">
+          <input type="radio" name="content-type" value="post">Post
+        </div>
+      </div>
+      <input class="button-primary" type="submit" value="Submit">
+    </form>
+  </body>
+</html>
+{{ end }}

@@ -1,0 +1,35 @@
+{{ define "pages" }}
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Basic Page Needs
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>{{ .Title }}</title>
+    
+    <!-- Mobile Specific Metas
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- FONT
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+    
+    <!-- CSS
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="../public/css/normalize.css">
+    <link rel="stylesheet" href="../public/css/skeleton.css">
+    
+    <!-- Favicon
+    –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="../public/images/favicon.png">
+  </head>
+  <body>
+    <h1>Latest Pages</h1>
+    {{ range . }}
+      <h2><a href="/page/{{ .ID }}">{{ .Title }}</a></h2>
+      <p>{{ .Content }}</p>
+    {{ end }}
+  </body>
+</html>
+{{ end }}
